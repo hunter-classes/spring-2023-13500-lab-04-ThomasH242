@@ -43,12 +43,22 @@ std::string cross(int height){
     std::string shape = "";
     for(int i = 1; i <= height; i++){//col
         for(int j = 1; j <= height; j++){//row
-            if(j == i){
+            if(j == i || j+i == height+1){
                 shape+= "*";
             }
             else{
                 shape+= " ";
             }
+        }
+        shape += "\n";
+    }
+    return shape;
+}
+std::string lower(int height){
+    std::string shape = "";
+    for(int i = 0;i <= height;i++){
+        for(int j = 0; j <= i;j++){
+            shape += "*";
         }
         shape += "\n";
     }
