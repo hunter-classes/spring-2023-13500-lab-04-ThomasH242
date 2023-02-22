@@ -64,3 +64,38 @@ std::string lower(int height){
     }
     return shape;
 }
+std::string upper(int height){
+    std::string shape = "";
+    for(int i = 0;i <= height;i++){
+        for(int k = 0;k <= i;k++){
+            shape += " ";
+        }
+        for(int j = height;j >= i;j--){
+            shape +="*";
+        }
+        shape += "\n";
+    }
+    return shape;
+}
+std::string trapezoid(int width, int height){
+    std::string shape = "";
+    int spaces = 0;
+    int stars = width;
+
+    for(int i = 0; i < height; i++){
+        for(int k = spaces;k >= 0;k--){
+            shape += " ";
+        }
+        for(int j = stars;j > 0;j--){
+            shape += "*";
+        }
+        
+        spaces += 1;
+        stars -= 2;
+        shape += "\n";
+    }
+    return shape;
+}
+std::string checkerboard3x3(){
+    //mod 6
+}
